@@ -596,4 +596,8 @@ body .show {
 
 body .hide {
   display: none !important;
-}/*# sourceMappingURL=style.css.map */
+}
+@media (min-width:730px){
+    #menu-s{
+      display: none}}
+/*# sourceMappingURL=style.css.map */
