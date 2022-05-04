@@ -597,7 +597,36 @@ body .show {
 body .hide {
   display: none !important;
 }
-@media (min-width:730px){
-    #menu-s{
-      display: none}}
-/*# sourceMappingURL=style.css.map */
+
+@media (min-width: 730px) {
+  #menu-s {
+    display: none;
+  }
+}
+footer {
+  margin-top: 80px;
+  background-image: linear-gradient(#333, #111);
+  color: white;
+  padding: 48px 8px 32px;
+  text-align: center;
+}
+footer a {
+  padding: 16px;
+  background-color: var(--blue);
+  font-size: 18px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 16px;
+  color: white;
+  margin: 16px auto;
+}
+footer .cp {
+  margin-top: 16px;
+}
+footer .t {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=style.css.map */

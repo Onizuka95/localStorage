@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOCAL-STORAGE API</title>
-    <link rel="stylesheet" href="style.css">
     <meta property="og:image" content="./images/database.png" />
     <meta property="image" content="./images/database.png" />
     <meta name="description" content="Web Storage API is a set of mechanisms that enable browsers to store key-value pairs" />
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -50,8 +51,8 @@
                     <ul>
                         <li>What is Window.localStorage?<a href="#s5">Read It</a> </li>
                         <li>methods and properties:<a href="#s6">Read It</a> </li>
-                        <li>localStorage limitations<a href="#s7">Read It</a> </li>
-                        <li>browser support<a href="#s8">Read It</a> </li>
+                        <li>LocalStorage Demo<a href="#s7">Read It</a> </li>
+                        <li>localStorage limitations<a href="#s8">Read It</a> </li>
                     </ul>
                 </div>
             </div>
@@ -69,9 +70,10 @@
                 <li><a href="#s4">localStorage in JavaScript</a></li>
                 <li><a href="#s5">What is Window.localStorage?</a></li>
                 <li> <a href="#s6">methods and properties</a></li>
-                <li> <a href="#s7"> limitations</a></li>
-                <li> <a href="#s8"> browser support</a></li>
-                <li> <a href="#s9"> Resources</a></li>
+                <li> <a href="#s7"> LocalStorage Demo</a></li>
+                <li> <a href="#s8"> limitations</a></li>
+                <li> <a href="#s9"> browser support</a></li>
+                <li> <a href="#s10"> Resources</a></li>
             </ul>
         </div>
 
@@ -89,8 +91,6 @@
                     The main difference between sessionStorage and localStorage is that sessionStorage only maintains a storage area while the browser is open (including when the page reloads or restores) while localStorage continues to store data after the browser is closed.
                     In other words, whereas data stored in sessionStorage is cleared when the page is closed, data stored in localStorage does not expire.</p>
             </div>
-
-
             <div>
                 <h2 id="s3">Where is localStorage stored</h2>
                 <p>
@@ -136,7 +136,7 @@
                 </p>
             </div>
             <div>
-                <h2 id="s6">LocalStorage Demo</h2>
+                <h2 id="s7">LocalStorage Demo</h2>
                 <p>
                     insert a key and value
                     <br> To store arrays or objects, you would have to convert them to strings.
@@ -167,9 +167,10 @@
                 <pre class="output" id="prased"><code>[{ he: 32,a:"fadsfa" },2,4,5]</code></pre>
             </div>
             <div>
-                <h2 id="s7">localStorage limitations</h2>
+                <h2 id="s8">localStorage limitations</h2>
                 <p>
-                    As easy as it is to use localStorage, it is also easy to misuse it. The following are limitations, and also ways to NOT use localStorage:
+                    The API is pretty simple and straightforward, so it may seem like you can store everything there without any restrictions and it is safe. But As easy as it is to use localStorage, it is also easy to misuse it. The following are limitations, and also ways
+                    to NOT use localStorage:
                 </p>
                 <ul class="list-s">
                     <li>
@@ -178,13 +179,23 @@
                     <li>
                         It is not a substitute for a server based database as information is only stored on the browser
                     </li>
-                    <li> localStorage is limited to 5MB across all major browsers</li>
+                    <li>
+
+                        LocalStorage is limited to only 5MB (across all major browsers) This may seem like a huge limit for storing strings, but there are certain types of applications that need to store a lot of data to support offline mode, etc.
+                    </li>
                     <li> localStorage is quite insecure as it has no form of data protection and can be accessed by any code on your web page</li>
-                    <li> localStorage is synchronous, meaning each operation called would only execute one after the other</li>
+                    <li>
+
+                        LocalStorage is synchronous LocalStorage is synchronous It blocks the execution of the main thread until the operation is complete, which has a negative effect on the performance of an application, especially when there are many operations.
+                    </li>
+                    <li>
+
+                        LocalStorage is not accessible from the Web or Service Workers If the application uses different Workers, the data stored in LocalStorage cannot be accessed within the Worker.
+                    </li>
                 </ul>
             </div>
             <div>
-                <h2 id="s8">localStorage browser support</h2>
+                <h2 id="s9">localStorage browser support</h2>
 
                 <p>
                     localStorage as a type of web storage is an HTML5 specification. It is supported by major browsers including IE8. To be sure the browser supports localStorage, you can check using the following snippe
@@ -196,13 +207,31 @@
 }</code></pre>
             </div>
             <div>
-                <h2 id="s9">Resources</h2>
+                <h2 id="s10">Resources</h2>
                 <ul class="list-s">
                     <li><a href="https://blog.logrocket.com/localstorage-javascript-complete-guide/">localStorage in JavaScript: A complete guide On logrocket</a></li>
                     <li><a href="https://javascript.info/localstorage">LocalStorage On javascript.info</a></li>
+                    <li><a href="https://www.w3schools.com/html/html5_webstorage.asp">HTML Web Storage API On w3schools</a></li>
+                    <li><a href="https://web.dev/storage-for-the-web/">Storage for the web On web.dev</a></li>
                     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Window.localStorage On MDN</a></li>
                 </ul>
             </div>
+            <footer>
+                <div class="thx">
+                    <div class="txt">
+                        <div class="t">
+                            thanks for reading our documentation
+                        </div>
+                        Let me know what you think about this article <br>
+                    </div>
+                    <a href="mailto:mohssineoussamasfh@gmai.com">
+                        Click here to write response...
+                    </a>
+                </div>
+                <div class="cp">
+                    all rights reserved © 2022
+                </div>
+            </footer>
         </div>
 
 
