@@ -3,6 +3,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+html{scroll-behavior: smooth;}
 
 .p1, .p2 > div {
   display: flex;
